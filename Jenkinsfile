@@ -1,6 +1,10 @@
 pipeline {
-    agent {
-        docker { image 'node:14-alpine' }
+      stages {
+        stage('No-op') {
+            steps {
+                sh 'ls'
+            }
+        }
     }
    post {
     failure {
