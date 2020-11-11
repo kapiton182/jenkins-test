@@ -2,11 +2,11 @@ pipeline {
     agent {
         docker { image 'node:14-alpine' }
     }
-    stages {
-        stage('Test') {
-            steps {
-                sh 'node --version'
-            }
-        }
+   post {
+    failure {
+        mail to: 'team@example.com',
+             subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
+             body: "Something is wrong with ${env.BUILD_URL}"
     }
+}
 }
