@@ -4,9 +4,9 @@ pipeline {
     }
    post {
     failure {
-        mail to: 'team@example.com',
-             subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
-             body: "Something is wrong with ${env.BUILD_URL}"
+        mail to: 'kapiton182@gmail.com',
+             subject: "Failed Pipeline:FUCKED}",
+             body: "Something is wrong with YOU"
     }
 }
 }
